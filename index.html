@@ -8,29 +8,61 @@
     <title>Tailwindcss Manage Landing Page</title>
   </head>
   <body>
-    <!-- CTA Section -->
-    <section id="cta">
-      <!-- Container -->
-      <div class="bg-brightRed flex flex-col items-center">
-        <div
-          class="px-7 py-16 flex flex-col items-center justify-between space-y-10 md:flex-row md:space-y-0 md:w-full md:px-16 lg:px-28"
-        >
-          <!-- Heading -->
-          <h2 class="text-white text-4xl font-bold text-center md:w-2/3 md:text-left">
-            Simplify how your team works today
-          </h2>
-          <!-- Button -->
-          <div class="my-16">
-            <a
-              href="#"
-              class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full hover:bg-brightRedLight"
-              >Get Started</a
-            >
+    <!-- Footer -->
+    <footer class="bg-black">
+      <!-- Flex Container -->
+      <div
+        class="container mx-auto px-6 py-12 flex flex-col items-center space-y-10 lg:flex-row lg:justify-between"
+      >
+        <!-- Email -->
+        <form class="flex justify-between items-center w-full">
+          <input placeholder="Updated in your inbox" class="p-2 pl-4 rounded-full w-4/5" />
+          <button
+            type="submit"
+            class="p-2 px-6 text-white bg-brightRed rounded-full hover:bg-brightRedLight shadow-2xl"
+          >
+            Go
+          </button>
+        </form>
+        <!-- Navbar -->
+        <div class="flex justify-between w-5/6">
+          <div class="flex flex-col space-y-2">
+            <a href="#" class="text-white hover:text-brightRed">Home</a>
+            <a href="#" class="text-white hover:text-brightRed">Pricing</a>
+            <a href="#" class="text-white hover:text-brightRed">Products</a>
+            <a href="#" class="text-white hover:text-brightRed">About</a>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <a href="#" class="text-white hover:text-brightRed">Careers</a>
+            <a href="#" class="text-white hover:text-brightRed">Community</a>
+            <a href="#" class="text-white hover:text-brightRed">Privacy Policy</a>
           </div>
         </div>
+        <!-- Social media links and logo -->
+        <div class="flex flex-col space-y-10 lg:flex-col-reverse">
+          <!-- Social media links -->
+          <div class="flex space-x-3">
+            <a href="#"><img src="img/icon-facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="img/icon-youtube.svg" alt="Youtube" /></a>
+            <a href="#"><img src="img/icon-twitter.svg" alt="Twitter" /></a>
+            <a href="#"><img src="img/icon-pinterest.svg" alt="Pinterest" /></a>
+            <a href="#"><img src="img/icon-instagram.svg" alt="Instagram" /></a>
+          </div>
+          <!-- Logo -->
+          <div><img src="img/logo-white.svg" alt="" /></div>
+        </div>
+        <!-- Copyright -->
+        <p id="copyright" class="text-white"></p>
       </div>
-    </section>
+    </footer>
 
     <div class="min-h-screen"></div>
+    <script>
+      const copyright = document.querySelector('#copyright')
+      const currentYear = new Date().getFullYear()
+      console.log('🚀 ~ currentYear:', currentYear)
+      // const currentYear = new Date().getFullYear()
+      copyright.textContent = `Copyright © ${currentYear}, All Rights Reserved`
+    </script>
   </body>
 </html>
